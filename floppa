@@ -22,26 +22,26 @@ library.theme = {
     fontsize = 20,
     titlesize = 23,
     font = Enum.Font.GothamSemibold,
-    background = "rbxassetid://5553946656",
+    background = "rbxassetid://8307557557",
     tilesize = 95,
     cursor = true,
     cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
-    backgroundcolor = Color3.fromRGB(0, 122, 99),
-    tabstextcolor = Color3.fromRGB(154, 217, 224),
-    bordercolor = Color3.fromRGB(0, 114, 133),
-    accentcolor = Color3.fromRGB(0, 122, 99),
-    accentcolor2 = Color3.fromRGB(0, 122, 99),
-    outlinecolor = Color3.fromRGB(0, 114, 113),
-    outlinecolor2 = Color3.fromRGB(0, 114, 113),
-    sectorcolor = Color3.fromRGB(0, 122, 99),
-    toptextcolor = Color3.fromRGB(154, 217, 224),
+    backgroundcolor = Color3.fromRGB(2, 12, 22),
+    tabstextcolor = Color3.fromRGB(255, 255, 255),
+    bordercolor = Color3.fromRGB(2, 12, 22),
+    accentcolor = Color3.fromRGB(2, 12, 22),
+    accentcolor2 = Color3.fromRGB(2, 12, 22),
+    outlinecolor = Color3.fromRGB(2, 12, 22),
+    outlinecolor2 = Color3.fromRGB(2, 12, 22),
+    sectorcolor = Color3.fromRGB(2, 12, 22),
+    toptextcolor = Color3.fromRGB(255, 255, 255),
     topheight = 48,
-    topcolor = Color3.fromRGB(0, 122, 99),
-    topcolor2 = Color3.fromRGB(0, 122, 99),
-    buttoncolor = Color3.fromRGB(0, 122, 99),
-    buttoncolor2 = Color3.fromRGB(0, 122, 99),
-    itemscolor = Color3.fromRGB(0, 122, 99),
-    itemscolor2 = Color3.fromRGB(0, 122, 99)
+    topcolor = Color3.fromRGB(2, 12, 22),
+    topcolor2 = Color3.fromRGB(2, 12, 22),
+    buttoncolor = Color3.fromRGB(2, 12, 22),
+    buttoncolor2 = Color3.fromRGB(2, 12, 22),
+    itemscolor = Color3.fromRGB(2, 12, 22),
+    itemscolor2 = Color3.fromRGB(2, 12, 22)
 }
 
 if library.theme.cursor and Drawing then
@@ -90,7 +90,7 @@ function library:CreateWatermark(name, position)
     
     watermark.mainbar = Instance.new("Frame", watermark.main)
     watermark.mainbar.Name = "Main"
-    watermark.mainbar.BorderColor3 = Color3.fromRGB(0, 114, 133)
+    watermark.mainbar.BorderColor3 = Color3.fromRGB(0, 122, 199)
     watermark.mainbar.Visible = watermark.Visible
     watermark.mainbar.BorderSizePixel = 0
     watermark.mainbar.ZIndex = 5
@@ -99,7 +99,7 @@ function library:CreateWatermark(name, position)
 
     watermark.Gradient = Instance.new("UIGradient", watermark.mainbar)
     watermark.Gradient.Rotation = 90
-    watermark.Gradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 122, 99)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 10, 10)) })
+    watermark.Gradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0.00, Color3.fromRGB(2, 12, 22)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 10, 10)) })
 
     watermark.Outline = Instance.new("Frame", watermark.mainbar)
     watermark.Outline.Name = "outline"
@@ -114,21 +114,21 @@ function library:CreateWatermark(name, position)
     watermark.BlackOutline.ZIndex = 3
     watermark.BlackOutline.BorderSizePixel = 0
     watermark.BlackOutline.BackgroundColor3 = library.theme.outlinecolor2
-    watermark.BlackOutline.Visible = watermark.Visible
+    watermark.BlackOutline.Visible = false
     watermark.BlackOutline.Position = UDim2.fromOffset(-2, -2)
 
     watermark.label = Instance.new("TextLabel", watermark.mainbar)
     watermark.label.Name = "FPSLabel"
-    watermark.label.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+    watermark.label.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
     watermark.label.BackgroundTransparency = 1.000
     watermark.label.Position = UDim2.new(0, 0, 0, 0)
     watermark.label.Size = UDim2.new(0, 238, 0, 25)
-    watermark.label.Font = library.theme.font
+    watermark.label.Font = Enum.Font.GothamSemibold
     watermark.label.ZIndex = 6
     watermark.label.Visible = watermark.Visible
     watermark.label.Text = watermark.text
     watermark.label.TextColor3 = Color3.fromRGB(154, 217, 224)
-    watermark.label.TextSize = 15
+    watermark.label.TextSize = 16
     watermark.label.TextStrokeTransparency = 0.000
     watermark.label.TextXAlignment = Enum.TextXAlignment.Left
     watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+10, 0, 25)
@@ -200,7 +200,7 @@ function library:CreateWatermark(name, position)
         tweenservice:Create(watermark.topbar, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
         tweenservice:Create(watermark.label, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { TextTransparency = 0, Active = true }):Play()
         tweenservice:Create(watermark.Outline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
-        tweenservice:Create(watermark.BlackOutline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
+        tweenservice:Create(watermark.BlackOutline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 1, Active = false }):Play()
     end)
 
     function watermark:UpdateTheme(theme)
@@ -334,7 +334,7 @@ function library:CreateWindow(name, size, hidebutton)
     window.TopBar.Name = "top"
     window.TopBar.Size = UDim2.fromOffset(window.size.X.Offset, window.theme.topheight)
     window.TopBar.BorderSizePixel = 0
-    window.TopBar.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+    window.TopBar.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
     window.TopBar.InputBegan:Connect(dragstart)
     window.TopBar.InputChanged:Connect(dragend)
     updateevent.Event:Connect(function(theme)
@@ -380,7 +380,7 @@ function library:CreateWindow(name, size, hidebutton)
     window.TabList.Position = UDim2.fromOffset(0, window.TopBar.AbsoluteSize.Y / 2 + 1)
     window.TabList.Size = UDim2.fromOffset(window.size.X.Offset, window.TopBar.AbsoluteSize.Y / 2)
     window.TabList.BorderSizePixel = 0
-    window.TabList.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+    window.TabList.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
 
     window.TabList.InputBegan:Connect(dragstart)
     window.TabList.InputChanged:Connect(dragend)
@@ -627,7 +627,7 @@ function library:CreateWindow(name, size, hidebutton)
             sector.LabelBackFrame.ZIndex = 5
             sector.LabelBackFrame.Size = UDim2.fromOffset(sector.Label.Size.X.Offset, 10)
             sector.LabelBackFrame.BorderSizePixel = 0
-            sector.LabelBackFrame.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+            sector.LabelBackFrame.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
             sector.LabelBackFrame.Position = UDim2.fromOffset(sector.Label.Position.X.Offset, sector.BlackOutline2.Position.Y.Offset)
 
             sector.Items = Instance.new("Frame", sector.Main) 
@@ -676,7 +676,7 @@ function library:CreateWindow(name, size, hidebutton)
                 button.Main.Name = "button"
                 button.Main.ZIndex = 5
                 button.Main.Size = UDim2.fromOffset(sector.Main.Size.X.Offset - 12, 14)
-                button.Main.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                button.Main.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
 
                 button.Gradient = Instance.new("UIGradient", button.Main)
                 button.Gradient.Rotation = 90
@@ -787,7 +787,7 @@ function library:CreateWindow(name, size, hidebutton)
 
                 toggle.Main = Instance.new("TextButton", sector.Items)
                 toggle.Main.Name = "toggle"
-                toggle.Main.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                toggle.Main.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                 toggle.Main.BorderColor3 = window.theme.outlinecolor
                 toggle.Main.BorderSizePixel = 0
                 toggle.Main.Size = UDim2.fromOffset(8, 8)
@@ -841,7 +841,7 @@ function library:CreateWindow(name, size, hidebutton)
                 toggle.Label = Instance.new("TextButton", toggle.Main)
                 toggle.Label.Name = "Label"
                 toggle.Label.AutoButtonColor = false
-                toggle.Label.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                toggle.Label.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                 toggle.Label.BackgroundTransparency = 1
                 toggle.Label.Position = UDim2.fromOffset(toggle.Main.AbsoluteSize.X + 10, -2)
                 toggle.Label.Size = UDim2.fromOffset(sector.Main.Size.X.Offset - 71, toggle.BlackOutline.Size.Y.Offset)
@@ -860,7 +860,7 @@ function library:CreateWindow(name, size, hidebutton)
                 toggle.CheckedFrame = Instance.new("Frame", toggle.Main)
                 toggle.CheckedFrame.ZIndex = 5
                 toggle.CheckedFrame.BorderSizePixel = 0
-                toggle.CheckedFrame.BackgroundColor3 = Color3.fromRGB(0, 122, 99) -- Color3.fromRGB(204, 0, 102)
+                toggle.CheckedFrame.BackgroundColor3 = Color3.fromRGB(2, 12, 22) -- Color3.fromRGB(204, 0, 102)
                 toggle.CheckedFrame.Size = toggle.Main.Size
 
                 toggle.Gradient2 = Instance.new("UIGradient", toggle.CheckedFrame)
@@ -1006,7 +1006,7 @@ function library:CreateWindow(name, size, hidebutton)
     
                     dropdown.Main = Instance.new("TextButton", sector.Items)
                     dropdown.Main.Name = "dropdown"
-                    dropdown.Main.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.Main.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     dropdown.Main.BorderSizePixel = 0
                     dropdown.Main.Size = UDim2.fromOffset(sector.Main.Size.X.Offset - 12, 16)
                     dropdown.Main.Position = UDim2.fromOffset(0, 0)
@@ -1014,7 +1014,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.Main.AutoButtonColor = false
                     dropdown.Main.Font = window.theme.font
                     dropdown.Main.Text = ""
-                    dropdown.Main.TextColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.Main.TextColor3 = Color3.fromRGB(2, 12, 22)
                     dropdown.Main.TextSize = 15
                     dropdown.Main.TextXAlignment = Enum.TextXAlignment.Left
                     updateevent.Event:Connect(function(theme)
@@ -1026,14 +1026,14 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.Gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(49, 49, 49)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(39, 39, 39))}
     
                     dropdown.SelectedLabel = Instance.new("TextLabel", dropdown.Main)
-                    dropdown.SelectedLabel.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.SelectedLabel.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     dropdown.SelectedLabel.BackgroundTransparency = 1
                     dropdown.SelectedLabel.Position = UDim2.fromOffset(5, 2)
                     dropdown.SelectedLabel.Size = UDim2.fromOffset(130, 13)
                     dropdown.SelectedLabel.Font = window.theme.font
                     dropdown.SelectedLabel.Text = toggle.text
                     dropdown.SelectedLabel.ZIndex = 5
-                    dropdown.SelectedLabel.TextColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.SelectedLabel.TextColor3 = Color3.fromRGB(2, 12, 22)
                     dropdown.SelectedLabel.TextSize = 15
                     dropdown.SelectedLabel.TextStrokeTransparency = 1
                     dropdown.SelectedLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1049,8 +1049,8 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.Nav.Rotation = 90
                     dropdown.Nav.ZIndex = 5
                     dropdown.Nav.Size = UDim2.fromOffset(8, 8)
-                    dropdown.Nav.Image = "rbxassetid://4918373417"
-                    dropdown.Nav.ImageColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.Nav.Image = "rbxassetid://8307557557"
+                    dropdown.Nav.ImageColor3 = Color3.fromRGB(2, 12, 22)
     
                     dropdown.BlackOutline2 = Instance.new("Frame", dropdown.Main)
                     dropdown.BlackOutline2.Name = "blackline"
@@ -1088,7 +1088,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.ItemsFrame = Instance.new("ScrollingFrame", dropdown.Main)
                     dropdown.ItemsFrame.Name = "itemsframe"
                     dropdown.ItemsFrame.BorderSizePixel = 0
-                    dropdown.ItemsFrame.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    dropdown.ItemsFrame.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     dropdown.ItemsFrame.Position = UDim2.fromOffset(0, dropdown.Main.Size.Y.Offset + 8)
                     dropdown.ItemsFrame.ScrollBarThickness = 2
                     dropdown.ItemsFrame.ZIndex = 8
@@ -1198,7 +1198,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.items = { }
                     function dropdown:Add(v)
                         local Item = Instance.new("TextButton", dropdown.ItemsFrame)
-                        Item.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                        Item.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                         Item.TextColor3 = Color3.fromRGB(154, 217, 224)
                         Item.BorderSizePixel = 0
                         Item.Position = UDim2.fromOffset(0, 0)
@@ -1245,12 +1245,12 @@ function library:CreateWindow(name, size, hidebutton)
     
                         runservice.RenderStepped:Connect(function()
                             if dropdown.multichoice and dropdown:isSelected(v) or dropdown.values[1] == v then
-                                Item.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                                Item.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                                 Item.TextColor3 = window.theme.accentcolor
                                 Item.Text = " " .. v
                             else
-                                Item.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
-                                Item.TextColor3 = Color3.fromRGB(0, 122, 99)
+                                Item.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
+                                Item.TextColor3 = Color3.fromRGB(2, 12, 22)
                                 Item.Text = v
                             end
                         end)
@@ -1349,7 +1349,7 @@ function library:CreateWindow(name, size, hidebutton)
                     textbox.Holder.ZIndex = 5
                     textbox.Holder.Size = UDim2.fromOffset(sector.Main.Size.X.Offset - 12, 14)
                     textbox.Holder.BorderSizePixel = 0
-                    textbox.Holder.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    textbox.Holder.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
     
                     textbox.Gradient = Instance.new("UIGradient", textbox.Holder)
                     textbox.Gradient.Rotation = 90
@@ -1369,7 +1369,7 @@ function library:CreateWindow(name, size, hidebutton)
                     textbox.Main.TextSize = 15
                     textbox.Main.TextColor3 = Color3.fromRGB(154, 217, 224)
                     textbox.Main.BorderSizePixel = 0
-                    textbox.Main.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    textbox.Main.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     textbox.Main.TextXAlignment = Enum.TextXAlignment.Left
     
                     if textbox.flag and textbox.flag ~= "" then
@@ -1449,14 +1449,14 @@ function library:CreateWindow(name, size, hidebutton)
                     local colorpicker = { }
 
                     colorpicker.callback = callback or function() end
-                    colorpicker.default = default or Color3.fromRGB(0, 122, 99)
+                    colorpicker.default = default or Color3.fromRGB(2, 12, 22)
                     colorpicker.value = colorpicker.default
                     colorpicker.flag = flag or ( (toggle.text or "") .. tostring(#toggle.Items:GetChildren()))
 
                     colorpicker.Main = Instance.new("Frame", toggle.Items)
                     colorpicker.Main.ZIndex = 6
                     colorpicker.Main.BorderSizePixel = 0
-                    colorpicker.Main.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    colorpicker.Main.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     colorpicker.Main.Size = UDim2.fromOffset(16, 10)
 
                     colorpicker.Gradient = Instance.new("UIGradient", colorpicker.Main)
@@ -1521,7 +1521,7 @@ function library:CreateWindow(name, size, hidebutton)
                     window.OpenedColorPickers[colorpicker.MainPicker] = false
                     colorpicker.MainPicker.Size = UDim2.fromOffset(180, 196)
                     colorpicker.MainPicker.BorderSizePixel = 0
-                    colorpicker.MainPicker.BackgroundColor3 = Color3.fromRGB(0, 122, 99)
+                    colorpicker.MainPicker.BackgroundColor3 = Color3.fromRGB(2, 12, 22)
                     colorpicker.MainPicker.Rotation = 0.000000000000001
                     colorpicker.MainPicker.Position = UDim2.fromOffset(-colorpicker.MainPicker.AbsoluteSize.X + colorpicker.Main.AbsoluteSize.X, 17)
 
@@ -1562,7 +1562,7 @@ function library:CreateWindow(name, size, hidebutton)
                     colorpicker.hue.ZIndex = 101
                     colorpicker.hue.Position = UDim2.new(0,3,0,3)
                     colorpicker.hue.Size = UDim2.new(0,172,0,172)
-                    colorpicker.hue.Image = "rbxassetid://4155801252"
+                    colorpicker.hue.Image = "rbxassetid://8307557557"
                     colorpicker.hue.ScaleType = Enum.ScaleType.Stretch
                     colorpicker.hue.BackgroundColor3 = Color3.new(1,0,0)
                     colorpicker.hue.BorderColor3 = window.theme.outlinecolor2
@@ -1576,7 +1576,7 @@ function library:CreateWindow(name, size, hidebutton)
                     colorpicker.hueselectorpointer.BorderSizePixel = 0
                     colorpicker.hueselectorpointer.Position = UDim2.new(0, 0, 0, 0)
                     colorpicker.hueselectorpointer.Size = UDim2.new(0, 7, 0, 7)
-                    colorpicker.hueselectorpointer.Image = "rbxassetid://6885856475"
+                    colorpicker.hueselectorpointer.Image = "rbxassetid://8307557557"
 
                     colorpicker.selector = Instance.new("TextLabel", colorpicker.MainPicker)
                     colorpicker.selector.ZIndex = 100
@@ -2356,7 +2356,7 @@ function library:CreateWindow(name, size, hidebutton)
                 colorpicker.hue.ZIndex = 101
                 colorpicker.hue.Position = UDim2.new(0,3,0,3)
                 colorpicker.hue.Size = UDim2.new(0,172,0,172)
-                colorpicker.hue.Image = "rbxassetid://4155801252"
+                colorpicker.hue.Image = "rbxassetid://8307557557"
                 colorpicker.hue.ScaleType = Enum.ScaleType.Stretch
                 colorpicker.hue.BackgroundColor3 = Color3.new(1,0,0)
                 colorpicker.hue.BorderColor3 = window.theme.outlinecolor2
@@ -2370,7 +2370,7 @@ function library:CreateWindow(name, size, hidebutton)
                 colorpicker.hueselectorpointer.BorderSizePixel = 0
                 colorpicker.hueselectorpointer.Position = UDim2.new(0, 0, 0, 0)
                 colorpicker.hueselectorpointer.Size = UDim2.new(0, 7, 0, 7)
-                colorpicker.hueselectorpointer.Image = "rbxassetid://6885856475"
+                colorpicker.hueselectorpointer.Image = "rbxassetid://8307557557"
 
                 colorpicker.selector = Instance.new("TextLabel", colorpicker.MainPicker)
                 colorpicker.selector.ZIndex = 100
@@ -2489,7 +2489,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.Nav.Rotation = 90
                     dropdown.Nav.ZIndex = 5
                     dropdown.Nav.Size = UDim2.fromOffset(8, 8)
-                    dropdown.Nav.Image = "rbxassetid://4918373417"
+                    dropdown.Nav.Image = "rbxassetid://8307557557"
                     dropdown.Nav.ImageColor3 = Color3.fromRGB(210, 210, 210)
     
                     dropdown.BlackOutline2 = Instance.new("Frame", dropdown.Main)
@@ -3035,7 +3035,7 @@ function library:CreateWindow(name, size, hidebutton)
                 dropdown.Nav.Rotation = 90
                 dropdown.Nav.ZIndex = 5
                 dropdown.Nav.Size = UDim2.fromOffset(8, 8)
-                dropdown.Nav.Image = "rbxassetid://4918373417"
+                dropdown.Nav.Image = "rbxassetid://8307557557"
                 dropdown.Nav.ImageColor3 = Color3.fromRGB(210, 210, 210)
 
                 dropdown.BlackOutline2 = Instance.new("Frame", dropdown.Main)
