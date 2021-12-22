@@ -127,7 +127,7 @@ function library:CreateWatermark(name, position)
     watermark.label.ZIndex = 6
     watermark.label.Visible = watermark.Visible
     watermark.label.Text = watermark.text
-    watermark.label.TextColor3 = Color3.fromRGB(255, 0, 72)
+    watermark.label.TextColor3 = Color3.fromRGB(255, 255, 255))
     watermark.label.TextSize = 16
     watermark.label.TextStrokeTransparency = 0.000
     watermark.label.TextXAlignment = Enum.TextXAlignment.Left
@@ -506,7 +506,7 @@ function library:CreateWindow(name, size, hidebutton)
             block = true
             for i,v in pairs(window.Tabs) do
                 if v ~= tab then
-                    v.TabButton.TextColor3 = Color3.fromRGB(255, 0, 72)
+                    v.TabButton.TextColor3 = Color3.fromRGB(255, 255, 255))
                     v.TabButton.Name = "Tab"
                     v.Left.Visible = false
                     v.Right.Visible = false
@@ -795,7 +795,7 @@ function library:CreateWindow(name, size, hidebutton)
                 toggle.Main.ZIndex = 5
                 toggle.Main.Font = Enum.Font.GothamSemibold
                 toggle.Main.Text = ""
-                toggle.Main.TextColor3 = Color3.fromRGB(255, 0, 72)
+                toggle.Main.TextColor3 = Color3.fromRGB(255, 255, 255))
                 toggle.Main.TextSize = 15
                 updateevent.Event:Connect(function(theme)
                     toggle.Main.BorderColor3 = theme.outlinecolor
@@ -1014,7 +1014,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.Main.AutoButtonColor = false
                     dropdown.Main.Font = window.theme.font
                     dropdown.Main.Text = ""
-                    dropdown.Main.TextColor3 = Color3.fromRGB(255, 0, 72)
+                    dropdown.Main.TextColor3 = Color3.fromRGB(255, 255, 255))
                     dropdown.Main.TextSize = 15
                     dropdown.Main.TextXAlignment = Enum.TextXAlignment.Left
                     updateevent.Event:Connect(function(theme)
@@ -1033,7 +1033,7 @@ function library:CreateWindow(name, size, hidebutton)
                     dropdown.SelectedLabel.Font = window.theme.font
                     dropdown.SelectedLabel.Text = toggle.text
                     dropdown.SelectedLabel.ZIndex = 5
-                    dropdown.SelectedLabel.TextColor3 = Color3.fromRGB(255, 0, 72)
+                    dropdown.SelectedLabel.TextColor3 = Color3.fromRGB(255, 255, 255))
                     dropdown.SelectedLabel.TextSize = 15
                     dropdown.SelectedLabel.TextStrokeTransparency = 1
                     dropdown.SelectedLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1199,7 +1199,7 @@ function library:CreateWindow(name, size, hidebutton)
                     function dropdown:Add(v)
                         local Item = Instance.new("TextButton", dropdown.ItemsFrame)
                         Item.BackgroundColor3 = Color3.fromRGB(28, 21, 58)
-                        Item.TextColor3 = Color3.fromRGB(255, 0, 72)
+                        Item.TextColor3 = Color3.fromRGB(255, 255, 255))
                         Item.BorderSizePixel = 0
                         Item.Position = UDim2.fromOffset(0, 0)
                         Item.Size = UDim2.fromOffset(dropdown.Main.Size.X.Offset - 4, 20)
@@ -1250,7 +1250,7 @@ function library:CreateWindow(name, size, hidebutton)
                                 Item.Text = " " .. v
                             else
                                 Item.BackgroundColor3 = Color3.fromRGB(28, 21, 58)
-                                Item.TextColor3 = Color3.fromRGB(255, 0, 72)
+                                Item.TextColor3 = Color3.fromRGB(255, 255, 255))
                                 Item.Text = v
                             end
                         end)
@@ -1367,7 +1367,7 @@ function library:CreateWindow(name, size, hidebutton)
                     textbox.Main.TextScaled = true
                     textbox.Main.Size = textbox.Holder.Size
                     textbox.Main.TextSize = 15
-                    textbox.Main.TextColor3 = Color3.fromRGB(255, 0, 72)
+                    textbox.Main.TextColor3 = Color3.fromRGB(255, 255, 255))
                     textbox.Main.BorderSizePixel = 0
                     textbox.Main.BackgroundColor3 = Color3.fromRGB(28, 21, 58)
                     textbox.Main.TextXAlignment = Enum.TextXAlignment.Left
